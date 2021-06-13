@@ -1,0 +1,202 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-color: antiquewhite;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.sidebar .logo {
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+ul li {
+    margin-bottom: 50px;
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: maroon;
+    font-weight: lighter;
+    font-family: serif;
+}
+
+.cart {
+    margin: 5px auto;
+    text-align: center;
+}
+
+.cart input {
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    font-weight: bolder;
+    background-color: maroon;
+    color: white;
+}
+
+.cart input:hover {
+    background-color: black;
+}
+
+ul li a:hover {
+    color: rgb(2, 2, 2);
+}
+
+.sidebar .hamburger .bar1,
+.bar2,
+.bar3 {
+    background-color: greenyellow;
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    display: none;
+}
+
+.container {
+    width: 70%;
+    float: left;
+    margin-left: 20%;
+}
+
+.container::after {
+    content: " ";
+    clear: both;
+}
+
+.container .first-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin-bottom: 150px;
+    margin-left: 150pxpx;
+    margin: 40px auto;
+    align-items: center;
+
+}
+
+.first-section h1 {
+    font-size: xx-large;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.first-section p {
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-right: 1.2em;
+}
+
+.gallery .thumbnail {
+    margin-right: 10px;
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+
+.container .second-section .photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    transition: 0.5s linear;
+    cursor: pointer;
+    object-position: 50%, 50%;
+    animation: position 0.3s infinite;
+}
+
+.thumbnail .photo img:hover {
+    border-radius: 0;
+}
+
+
+.thumbnail p {
+    text-align: center;
+}
+
+
+
+
+@keyframes position {
+    from {
+        left: 50%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        left: -200px;
+    }
+
+    .container .first-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .container .first-section h1 {
+        font-size: xx-large;
+        font-family: cursive;
+    }
+
+    .container .first-section small-message p {
+        font-size: small;
+    }
+
+    .second-section {
+        margin-top: -100px;
+    }
+
+    .sidebar .hamburger .bar1,
+    .bar2,
+    .bar3 {
+        display: block;
+    }
+}
